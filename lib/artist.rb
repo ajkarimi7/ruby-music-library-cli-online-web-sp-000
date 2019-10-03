@@ -27,9 +27,6 @@ class Artist
     artist = new(name)
     artist.save
     artist
-
-    # Or, as a one-liner:
-    # new(name).tap{ |a| a.save }
   end
 
   def add_song(song)
@@ -40,4 +37,5 @@ class Artist
   def genres
     songs.collect{ |s| s.genre }.uniq
   end
+  
 end
